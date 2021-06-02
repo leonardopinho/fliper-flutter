@@ -12,7 +12,7 @@ class SlideRightLeft extends PageRouteBuilder {
         ) {
       return page;
     },
-    transitionDuration: Duration(milliseconds: 700),
+    transitionDuration: Duration(milliseconds: 1100),
     transitionsBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation, Widget child) {
       return SlideTransition(
         child: child,

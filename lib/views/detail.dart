@@ -10,13 +10,21 @@ class Detail extends StatefulWidget {
 }
 
 class _DetailState extends State<Detail> {
+  bool _show = false;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-
-    return Scaffold(
-        backgroundColor: ColorUtils.fromHex('#E7EBF5'),
-        body: Stack(
-          children: [Center(child: CardSummary())], //TODO: future builder
-        ));
+    print(_show);
+    return Scaffold(backgroundColor: ColorUtils.fromHex('#E7EBF5'), body: Stack(children: [Center(child: CardSummary())]));
   }
 }

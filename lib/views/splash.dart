@@ -15,7 +15,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
     SystemChrome.setPreferredOrientations([Constants.deviceOrientation]);
-    Future.delayed(Duration(milliseconds: 3000), () {
+    Future.delayed(Duration(milliseconds: 4000), () {
       Routes.goToDetailPage(context);
     });
   }
