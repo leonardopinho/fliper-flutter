@@ -1,15 +1,13 @@
 import 'package:fliper/config/constants.dart';
 import 'package:graphql/client.dart';
 
-class GraphQL{
+class GraphQL {
+  static GraphQLClient get instance => _getClient();
 
-  static GraphQLClient getClient(){
-    var httpLink = HttpLink(
-        Constants.endPoint,
-        defaultHeaders: {
-          "x-hasura-admin-secret": Constants.secret,
-        }
-    );
+  static GraphQLClient _getClient() {
+    var httpLink = HttpLink(Constants.endPoint, defaultHeaders: {
+      "x-hasura-admin-secret": Constants.secret,
+    });
 
     var authLink = AuthLink(
       getToken: () async => '$Constants.secret',
@@ -24,5 +22,4 @@ class GraphQL{
 
     return graphQLClient;
   }
-
 }

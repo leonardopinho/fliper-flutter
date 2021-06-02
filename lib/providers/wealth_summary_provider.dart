@@ -7,7 +7,7 @@ class WealthSummaryProvider extends ChangeNotifier {
   var _client;
 
   WealthSummaryProvider() {
-    _client = GraphQL.getClient();
+    _client = GraphQL.instance;
   }
 
   // String get data => 'asd';
@@ -41,6 +41,7 @@ class WealthSummaryProvider extends ChangeNotifier {
     var queryOptions = QueryOptions(document: gql(query));
     result = await _client.query(queryOptions);
 
+    // TODO: work in loop
     if (result.isConcrete) {
       if (result.data != null) {
         var r = result.data['wealthSummary'];

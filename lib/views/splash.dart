@@ -30,7 +30,7 @@ class _SplashState extends State<Splash> {
     return Container(
         width: 150,
         height: 150,
-        color: ColorUtils.fromHex('#0074b1'),
+        color: ColorUtils.fromHex('#1A2644'),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
