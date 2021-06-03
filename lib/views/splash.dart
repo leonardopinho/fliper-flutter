@@ -21,7 +21,7 @@ class _SplashState extends State<Splash> with TickerProviderStateMixin {
 
     SystemChrome.setPreferredOrientations([Constants.deviceOrientation]);
 
-    Future.delayed(Duration(milliseconds: 2500), () {
+    Future.delayed(Duration(milliseconds: 2200), () {
       Routes.goToDetailPage(context);
     });
   }
@@ -44,7 +44,7 @@ class _SplashState extends State<Splash> with TickerProviderStateMixin {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Container(
-              height: Helper.getDeviceHeight(context) - 150,
+              height: Helper.getDeviceHeight(context) - 160,
               child: Lottie.asset(
                 'assets/json/logo.json',
                 controller: controller,

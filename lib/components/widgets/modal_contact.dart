@@ -12,7 +12,7 @@ class _ModalContactState extends State<ModalContact> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 160,
+      height: 150,
       color: Colors.white,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -66,10 +66,6 @@ class _ModalContactState extends State<ModalContact> {
                           fontWeight: FontWeight.w800,
                           color: ColorUtils.fromHex('#2461B3'),
                         )),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 4),
-                      child: Text('https://www.linkedin.com/in/leonardo-pinho/', textAlign: TextAlign.center, style: TextStyle(fontSize: 13, fontFamily: 'Metropolis', fontWeight: FontWeight.w500, color: Colors.black.withOpacity(0.7))),
-                    ),
                     Padding(
                       padding: const EdgeInsets.only(top: 4),
                       child: Text('https://github.com/leonardopinho', textAlign: TextAlign.center, style: TextStyle(fontSize: 13, fontFamily: 'Metropolis', fontWeight: FontWeight.w500, color: Colors.black.withOpacity(0.7))),
