@@ -4,51 +4,36 @@ import 'package:flutter/material.dart';
 import 'package:graphql/client.dart';
 
 class WealthSummaryProvider extends ChangeNotifier {
+  WealthSummary data;
   var _client;
 
   WealthSummaryProvider() {
     _client = GraphQL.instance;
   }
 
-  // String get data => 'asd';
-
-  // Future<WealthSummary> fetchData() async {
-  // var response = await http.get(_dataUrl);
-  // if (response.statusCode == 200) {
-  //   _jsonResonse = response.body;
-  // }
-  //
-  // _isFetching = false;
-  // notifyListeners();
-  // }
-
   Future<WealthSummary> fetchData() async {
-    var result;
-
     String query = '''
-        query GetSummary {
-          wealthSummary {
+        query getData {
+          wealthSummary(order_by: {id: desc}, limit: 1) {
             id
+            gain
+            cdi
             profitability
             total
             hasHistory
-            gain
-            cdi
           }
         }
       ''';
 
     var queryOptions = QueryOptions(document: gql(query));
-    result = await _client.query(queryOptions);
+    var response = await _client.query(queryOptions);
 
-    // TODO: work in loop
-    if (result.isConcrete) {
-      if (result.data != null) {
-        var r = result.data['wealthSummary'];
-        print(r);
+    if (response != null && response.isConcrete) {
+      if (response.data != null) {
+        data = WealthSummary.fromJson(response.data['wealthSummary'].first);
+        notifyListeners();
       }
     }
 
-    return new WealthSummary();
   }
 }
