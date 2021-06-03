@@ -1,11 +1,8 @@
-import 'dart:async';
 
 import 'package:fliper/app/core/events/event.dart';
 import 'package:fliper/app/core/extensions/double.dart';
 import 'package:fliper/app/utils/color_utils.dart';
-import 'package:fliper/app/utils/helper.dart';
 import 'package:fliper/events/modal_event.dart';
-import 'package:fliper/models/wealth_summary.dart';
 import 'package:fliper/providers/wealth_summary_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
