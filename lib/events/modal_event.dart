@@ -1,4 +1,5 @@
 import 'package:fliper/app/core/events/event.dart';
+import 'package:fliper/app/core/exceptions/app_exception.dart';
 import 'package:fliper/components/widgets/modal_contact.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,7 @@ class ModalEvent implements AbstractModalEvent {
 
   @override
   void dispose() {
+    event.removeEventListener(Modal.SHOW);
     event = null;
   }
 
@@ -31,8 +33,8 @@ class ModalEvent implements AbstractModalEvent {
         clipBehavior: Clip.hardEdge,
         builder: (ctx) => ModalContact(),
       );
-    } catch (e) {
-      //TODO: error log
+    } on AppException catch (e) {
+      throw new AppException('OpenModal: $e');
     }
   }
 }
