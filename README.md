@@ -8,7 +8,7 @@ Projeto teste desenvolvido usando Flutter e GraphQL.
 
 ### APK
 ```
-https://github.com/leonardopinho/futter-graphql/tree/master/apk
+https://github.com/leonardopinho/flutter-graphql/tree/master/apk
 ```
 
 ### Configurações
