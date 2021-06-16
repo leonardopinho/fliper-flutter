@@ -2,9 +2,9 @@
 
 Projeto desenvolvido para a Fliper usando GraphQL.
 
-### Screenshots
+### Screenshot
 
-<img src="Screen-1.gif" height="340em" />
+<img src="Screen-1.gif" height="500em" />
 
 ### APK
 ```
