@@ -1,6 +1,6 @@
-# Fliper
+# Flutter GraphQL
 
-Projeto desenvolvido para a Fliper usando GraphQL.
+Projeto teste desenvolvido usando Flutter e GraphQL.
 
 ### Screenshot
 
