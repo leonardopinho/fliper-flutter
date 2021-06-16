@@ -1,6 +1,10 @@
 # Fliper
 
-Projeto teste desenvolvido para a Fliper.
+Projeto desenvolvido para a Fliper usando GraphQL.
+
+### Screenshots
+
+<img src="Screen-1.gif" height="300em" />
 
 ### APK
 ```
