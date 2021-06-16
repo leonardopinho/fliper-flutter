@@ -4,7 +4,7 @@ Projeto desenvolvido para a Fliper usando GraphQL.
 
 ### Screenshots
 
-<img src="Screen-1.gif" height="300em" />
+<img src="Screen-1.gif" height="340em" />
 
 ### APK
 ```
